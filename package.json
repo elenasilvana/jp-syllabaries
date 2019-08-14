@@ -5,7 +5,8 @@
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.0"
+    "react-scripts": "3.1.1",
+    "uninstall": "0.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -14,7 +15,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "wesbos"
   },
   "browserslist": {
     "production": [
@@ -27,5 +28,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
