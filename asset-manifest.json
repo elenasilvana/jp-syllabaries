@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/jp-syllabaries/static/css/main.2cce8147.chunk.css",
+    "main.js": "/jp-syllabaries/static/js/main.9f59734c.chunk.js",
+    "main.js.map": "/jp-syllabaries/static/js/main.9f59734c.chunk.js.map",
+    "runtime~main.js": "/jp-syllabaries/static/js/runtime~main.4ea6f67f.js",
+    "runtime~main.js.map": "/jp-syllabaries/static/js/runtime~main.4ea6f67f.js.map",
+    "static/js/2.9e8de8f4.chunk.js": "/jp-syllabaries/static/js/2.9e8de8f4.chunk.js",
+    "static/js/2.9e8de8f4.chunk.js.map": "/jp-syllabaries/static/js/2.9e8de8f4.chunk.js.map",
+    "index.html": "/jp-syllabaries/index.html",
+    "precache-manifest.6851f33e0fe23a110e3699bc56c097d5.js": "/jp-syllabaries/precache-manifest.6851f33e0fe23a110e3699bc56c097d5.js",
+    "service-worker.js": "/jp-syllabaries/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/jp-syllabaries/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/jp-syllabaries/static/media/logo.5d5d9eef.svg"
+  }
+}
