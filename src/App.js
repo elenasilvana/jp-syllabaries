@@ -3,7 +3,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
 import HomePage from './components/Home';
-import SyllabaryPage from './components/Syllabary';
+import Syllabary from './components/Syllabary';
 import GamePage from './components/Game';
 import MemoryGamePage from './components/MemoryGame';
 
@@ -18,7 +18,7 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/sillabary">Syllabary</Link>
+              <Link to="/syllabary">Syllabary</Link>
             </li>
             <li>
               <Link to="/game">Play to learn</Link>
@@ -29,7 +29,7 @@ function App() {
           </ul>
         </nav>
         <Route path="/" exact component={HomePage} />
-        <Route path="/syllabary" component={SyllabaryPage} />
+        <Route path="/syllabary" component={Syllabary} />
         <Route path="/game" component={GamePage} />
         <Route path="/memorygame" component={MemoryGamePage} />
       </div>
