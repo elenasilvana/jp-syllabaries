@@ -1,35 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
 import HomePage from './components/Home';
-import Syllabary from './components/Syllabary';
+import SyllabaryPage from './components/Syllabary';
 import GamePage from './components/Game';
 import MemoryGamePage from './components/MemoryGame';
 
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+
 function App() {
+
+  const [ collapsed, setCollapsed ] = useState(false);
+
+  const toggleNavbar = () => {
+    /*
+    if(!collapsed){
+     setCollapsed(false);
+    }else{setCollapsed(true)}*/
+     return collapsed ? setCollapsed(false) : setCollapsed(true);
+    }
+    // <NavbarBrand as={Link} to={HomePage} className="mr-auto">Learn syllabaries</NavbarBrand>
+
   return (
     <div className="App">
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/syllabary">Syllabary</Link>
-            </li>
-            <li>
-              <Link to="/game">Play to learn</Link>
-            </li>
-            <li>
-              <Link to="/memorygame">Memory game</Link>
-            </li>
-          </ul>
-        </nav>
+      <Navbar color="faded" light> 
+          <NavbarBrand  className="mr-auto"><Link to='/'>Learn Syllabaries</Link></NavbarBrand>
+          <NavbarToggler onClick={()=>{toggleNavbar()}} className="mr-2" />
+          <Collapse isOpen={collapsed} navbar>
+            <Nav navbar>
+              <NavItem>
+                <NavLink><Link to='/syllabary'>Syllabaries</Link></NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink><Link to='/game'>Play</Link></NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
         <Route path="/" exact component={HomePage} />
-        <Route path="/syllabary" component={Syllabary} />
+        <Route path="/syllabary" component={SyllabaryPage} />
         <Route path="/game" component={GamePage} />
         <Route path="/memorygame" component={MemoryGamePage} />
       </div>
