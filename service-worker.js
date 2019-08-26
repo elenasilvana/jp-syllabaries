@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/jp-syllabaries/precache-manifest.6851f33e0fe23a110e3699bc56c097d5.js"
+  "/jp-syllabaries/precache-manifest.b0fa5e8be2a266e4c48106c0b6cab639.js"
 );
 
 self.addEventListener('message', (event) => {
