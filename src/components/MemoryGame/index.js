@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
 import Board from '../board';
-import initializeDeck from '../../deck';
+import { initializeDeck } from '../../deck';
 
 export default function MemoryGame()  {
     const [cards, setCards] = useState([])
