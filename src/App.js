@@ -35,7 +35,7 @@ function App() {
                 <NavLink><Link to='/syllabary'>Syllabaries</Link></NavLink>
               </NavItem>
               <NavItem>
-                <NavLink><Link to='/game'>Play</Link></NavLink>
+                <NavLink><Link to='/memorygame'>Play</Link></NavLink>
               </NavItem>
             </Nav>
           </Collapse>
