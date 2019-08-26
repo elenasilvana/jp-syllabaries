@@ -73,7 +73,7 @@ export default function MemoryGame()  {
    
         return(
            <div>
-               <h2>Recuerdas donde está la carta?</h2>
+               <h2>do you remember where are the pair card?</h2>
             <Board
             dimension={dimension} 
             cards={cards} 

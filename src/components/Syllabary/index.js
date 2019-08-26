@@ -19,7 +19,7 @@ export default function Syllabary() {
             <div class="container">
                 <div class="row">
                     <div class="align-self-center justify-content-center">
-                        <h1>Hola Syllabary</h1>
+                        <h1>Katakana Syllabary</h1>
                         <SyllabaryBoard
                         cards={cards}
                         flipped={flipped}
