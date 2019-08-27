@@ -24,7 +24,7 @@ export default function SyllabaryCard ({
                 height, width
             }}
             className={flipped ? 'front' : 'back'}
-            src={flipped ? `/img/katakana/${type}.png`: `/img/katakana/${type}.png`}></img>
+            src={flipped ? `${process.env.PUBLIC_URL}/img/katakana/${type}.png`: `/img/katakana/${type}.png`}></img>
 
         </div>
 
