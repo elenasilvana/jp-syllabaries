@@ -27,7 +27,7 @@ export default function MemoryCard({
                     height, width
                 }}
                 className={flipped ? 'front' : 'back'}
-                src={flipped || solved ? `${window.location.origin}/img/katakana/${type}.png` : `${window.location.origin}/img/katakana/back.jpg`}
+                src={flipped || solved ? `${process.env.PUBLIC_URL}/img/katakana/${type}.png` : `${process.env.PUBLIC_URL}/img/katakana/back.jpg`}
                 />
 
             </div>
