@@ -45,7 +45,7 @@ export default function MemoryGame()  {
 
     const preloadImages = () => {
         cards.map((card) => {
-            const src = `${process.env.PUBLIC_URL}/img/katakana/${card.type}.png`;
+            const src = `${window.location.origin}/img/katakana/${card.type}.png`;
             console.log(src);
             new Image().src = src;
         })
