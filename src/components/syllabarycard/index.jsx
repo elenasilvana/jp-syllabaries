@@ -21,18 +21,19 @@ export default function SyllabaryCard({
       onClick={() => handleClick(id)}
     >
       <div className="flipper">
-        <img
-          style={{
-            height,
-            width
-          }}
+        <div
+          style={{ border: "solid red" }}
           className={flipped ? "front" : "back"}
-          src={
-            flipped
-              ? `${process.env.PUBLIC_URL}/img/katakana/${type}.png`
-              : `${process.env.PUBLIC_URL}/img/katakana/${type}.png`
-          }
-        ></img>
+        >
+          {flipped ? (
+            <p style={{ width: "100%", border: "solid grey" }}>{type}</p>
+          ) : (
+            <img
+              style={{ height, width }}
+              src={`${process.env.PUBLIC_URL}/img/katakana/${type}.png`}
+            ></img>
+          )}
+        </div>
       </div>
     </div>
   );
