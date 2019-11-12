@@ -21,10 +21,7 @@ export default function SyllabaryCard({
       onClick={() => handleClick(id)}
     >
       <div className="flipper">
-        <div
-          style={{ border: "solid grey" }}
-          className={flipped ? "front" : "back"}
-        >
+        <div style={{}} className={flipped ? "front" : "back"}>
           {flipped ? (
             <div className="alphabet-letter">
               <section>{`${type.toLowerCase()}`}</section>
