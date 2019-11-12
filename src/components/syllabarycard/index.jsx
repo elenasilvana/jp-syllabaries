@@ -22,11 +22,13 @@ export default function SyllabaryCard({
     >
       <div className="flipper">
         <div
-          style={{ border: "solid red" }}
+          style={{ border: "solid grey" }}
           className={flipped ? "front" : "back"}
         >
           {flipped ? (
-            <p style={{ width: "100%", border: "solid grey" }}>{type}</p>
+            <div className="alphabet-letter">
+              <section>{`${type.toLowerCase()}`}</section>
+            </div>
           ) : (
             <img
               style={{ height, width }}
