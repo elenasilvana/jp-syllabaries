@@ -35,15 +35,13 @@ export function initializeDeck() {
   let id = 0;
   while (cards.length < CARDS_NUMBER) {
     const index = Math.floor(Math.random() * syllabary.length);
-    cards.push({
+    let card = {
       id: id++,
       type: syllabary.splice(index, 1)[0]
-    });
-    cards.push({
-      id: id++,
-      type: syllabary.splice(index, 1)[0]
-    });
-    console.log(cards);
+    }
+    cards.push(card);
+
+    cards.push({...card, id: id++});
   }
   return shuffle(cards);
 }
