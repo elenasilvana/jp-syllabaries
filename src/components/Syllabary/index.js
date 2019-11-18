@@ -5,12 +5,27 @@ import "./styles.css";
 import * as Deck from "../../deck";
 
 export default function Syllabary() {
-  //export default class Syllabary extends Component {
-  //render(){
   const [cards, setCards] = useState([]);
   const [flipped, setFlipped] = useState([]);
 
-  const handleClick = id => setFlipped([...flipped, id]);
+  const handleClick = id => {
+    if (flipped.length === 0) {
+      setFlipped([id]);
+    }
+    if (sameCardClicked(id)) {
+      return setFlipped([]);
+    }
+    if (flipped.length === 1) {
+      resetCard();
+      setFlipped([id]);
+    }
+  };
+
+  const resetCard = () => {
+    setFlipped([]);
+  };
+
+  const sameCardClicked = id => flipped.includes(id);
 
   useEffect(() => {
     setCards(Deck.getKatakanaSyllabary());
