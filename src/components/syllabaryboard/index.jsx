@@ -2,9 +2,13 @@ import React from "react";
 import propTypes from "prop-types";
 
 import SyllabaryCard from "../syllabarycard";
-//import SyllabaryCards from '';
 
-export default function SyllabaryBoard({ cards, flipped, handleClick }) {
+export default function SyllabaryBoard({
+  cards,
+  flipped,
+  handleClick,
+  isHiragana
+}) {
   return (
     <div className="board">
       {cards.map(card => (
@@ -16,6 +20,7 @@ export default function SyllabaryBoard({ cards, flipped, handleClick }) {
           height={150}
           flipped={flipped.includes(card.id)}
           handleClick={() => handleClick(card.id)}
+          isHiragana={isHiragana}
         />
       ))}
     </div>
@@ -25,5 +30,6 @@ export default function SyllabaryBoard({ cards, flipped, handleClick }) {
 SyllabaryBoard.propTypes = {
   cards: propTypes.arrayOf(propTypes.shape({})).isRequired,
   flipped: propTypes.arrayOf(propTypes.number).isRequired,
-  handleClick: propTypes.func.isRequired
+  handleClick: propTypes.func.isRequired,
+  isHiragana: propTypes.bool.isRequired
 };

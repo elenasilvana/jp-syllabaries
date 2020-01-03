@@ -9,7 +9,8 @@ export default function SyllabaryCard({
   type,
   flipped,
   height,
-  width
+  width,
+  isHiragana
 }) {
   return (
     <div
@@ -29,7 +30,9 @@ export default function SyllabaryCard({
           ) : (
             <img
               style={{ height, width }}
-              src={`${process.env.PUBLIC_URL}/img/katakana/${type}.png`}
+              src={`${process.env.PUBLIC_URL}/img/${
+                isHiragana ? "hiragana" : "katakana"
+              }/${type}.png`}
             ></img>
           )}
         </div>
@@ -44,5 +47,6 @@ SyllabaryCard.propTypes = {
   flipped: propTypes.bool.isRequired,
   type: propTypes.string.isRequired,
   height: propTypes.number.isRequired,
-  width: propTypes.number.isRequired
+  width: propTypes.number.isRequired,
+  isHiragana: propTypes.bool.isRequired
 };

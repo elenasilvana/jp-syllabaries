@@ -1,4 +1,4 @@
-import { KATAKANA } from "./utils/syllabariesCharacters";
+import { SYLLABARYCHAR } from "./utils/syllabariesCharacters";
 import Syllabary from "./utils/syllabary";
 
 function shuffle(array) {
@@ -12,17 +12,17 @@ function shuffle(array) {
   return _array;
 }
 
-export function getKatakanaSyllabary() {
+export function getSyllabaryDeck() {
   let id = 0;
-  const SyllabariesChar = [...KATAKANA];
-  const katakanaCards = SyllabariesChar.reduce((acc, type) => {
+  const SyllabariesChar = [...SYLLABARYCHAR];
+  const syllabaryCards = SyllabariesChar.reduce((acc, type) => {
     acc.push({
       id: id++,
       type
     });
     return acc;
   }, []);
-  return katakanaCards;
+  return syllabaryCards;
 }
 
 const CARDS_NUMBER = 16;

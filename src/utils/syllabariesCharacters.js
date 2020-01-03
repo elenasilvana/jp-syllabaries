@@ -1,4 +1,4 @@
-export const KATAKANA = [
+export const SYLLABARYCHAR = [
   "A",
   "I",
   "U",
@@ -9,11 +9,11 @@ export const KATAKANA = [
   "KU",
   "KE",
   "KO",
-  "GA",
+  /* "GA",
   "GI",
   "GU",
   "GE",
-  "GO",
+  "GO",*/
   "SA",
   "SHI",
   "SU",
