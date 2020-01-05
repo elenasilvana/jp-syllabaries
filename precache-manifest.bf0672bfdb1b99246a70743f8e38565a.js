@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "615cf7560b8ad6957f66b65e2a9b428c",
+    "revision": "11400b1ffe8aaac5921e93bdc96d0816",
     "url": "/jp-syllabaries/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jp-syllabaries/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "3a98c17dd95a657dd738",
+    "revision": "afc4f742751f01f95276",
     "url": "/jp-syllabaries/static/css/main.91a5ca8d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jp-syllabaries/static/js/2.1c18456e.chunk.js"
   },
   {
-    "revision": "3a98c17dd95a657dd738",
-    "url": "/jp-syllabaries/static/js/main.863fc5fe.chunk.js"
+    "revision": "afc4f742751f01f95276",
+    "url": "/jp-syllabaries/static/js/main.cd0b9078.chunk.js"
   },
   {
     "revision": "396b2e915375416427b2",
