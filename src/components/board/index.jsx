@@ -11,7 +11,8 @@ export default function Board({
   cards,
   flipped,
   solved,
-  handleClick
+  handleClick,
+  isHiragana
 }) {
   return (
     <div className="board">
@@ -27,6 +28,7 @@ export default function Board({
           solved={solved.includes(card.id)}
           handleClick={handleClick}
           disabled={disabled || solved.includes(card.id)}
+          isHiragana={isHiragana}
         />
       ))}
     </div>
@@ -39,5 +41,6 @@ Board.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   flipped: PropTypes.arrayOf(PropTypes.number).isRequired,
   solved: PropTypes.arrayOf(PropTypes.number).isRequired,
-  handleClick: PropTypes.func.isRequired
+  handleClick: PropTypes.func.isRequired,
+  isHiragana: PropTypes.bool.isRequired
 };

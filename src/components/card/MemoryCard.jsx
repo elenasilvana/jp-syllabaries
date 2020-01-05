@@ -13,7 +13,8 @@ export default function MemoryCard({
   flipped,
   solved,
   height,
-  width
+  width,
+  isHiragana
 }) {
   return (
     <div
@@ -32,7 +33,9 @@ export default function MemoryCard({
             <div
               className="char-container"
               style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL}/img/katakana/${type}.png)`
+                backgroundImage: `url(${process.env.PUBLIC_URL}/img/${
+                  isHiragana ? "hiragana" : "katakana"
+                }/${type}.png)`
               }}
             >
               <div>{char === true ? `${type}` : ""}</div>
@@ -54,7 +57,9 @@ export default function MemoryCard({
           }}
           src={
             flipped || solved
-              ? `${process.env.PUBLIC_URL}/img/katakana/${type}.png`
+              ? `${process.env.PUBLIC_URL}/img/${
+                  isHiragana ? "hiragana" : "katakana"
+                }/${type}.png`
               : `${process.env.PUBLIC_URL}/img/katakana/back.jpg`
           }
         />
@@ -72,5 +77,6 @@ MemoryCard.propTypes = {
   type: PropTypes.string.isRequired,
   char: PropTypes.bool,
   height: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired
+  width: PropTypes.number.isRequired,
+  isHiragana: PropTypes.bool.isRequired
 };
