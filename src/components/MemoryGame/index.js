@@ -2,7 +2,12 @@ import React, { Component, useState, useEffect } from "react";
 import Board from "../board";
 import { initializeDeck } from "../../deck";
 
+import aHiragana from "../../layouts/ahiragana.svg";
+import aKatakana from "../../layouts/akatakana.svg";
+
 export default function MemoryGame() {
+  const [isHiragana, setisHiragana] = useState(false);
+  const [isKatakana, setisKatakana] = useState(false);
   const [cards, setCards] = useState([]);
   const [flipped, setFlipped] = useState([]);
   const [dimension, setDimension] = useState(400);
@@ -75,15 +80,54 @@ export default function MemoryGame() {
 
   return (
     <div>
-      <h2>do you remember where are the pair card?</h2>
-      <Board
-        dimension={dimension}
-        cards={cards}
-        flipped={flipped}
-        handleClick={handleClick}
-        disabled={disabled}
-        solved={solved}
-      />
+      <div>
+        <h1>
+          {!isHiragana && !isKatakana
+            ? "Select syllabary"
+            : isHiragana
+            ? "Playing with Hiragana"
+            : "Playing with Katakana"}
+        </h1>
+        <div className="select-buttons">
+          <button
+            className="icon-button"
+            onClick={() => {
+              setisHiragana(true);
+              if (isKatakana) {
+                setisKatakana(false);
+              }
+            }}
+          >
+            <img style={{ width: "70px" }} src={aHiragana} />
+          </button>
+          <button
+            className="icon-button"
+            onClick={() => {
+              setisKatakana(true);
+              if (isHiragana) {
+                setisHiragana(false);
+              }
+            }}
+          >
+            <img style={{ width: "70px" }} src={aKatakana} />
+          </button>
+        </div>
+      </div>
+      <div className={!isHiragana && !isKatakana ? "hide" : ""}>
+        <h3 style={{ paddingTop: "60px" }}>
+          do you remember where the pair card is?
+        </h3>
+
+        <Board
+          dimension={dimension}
+          cards={cards}
+          flipped={flipped}
+          handleClick={handleClick}
+          disabled={disabled}
+          solved={solved}
+          isHiragana={isHiragana}
+        />
+      </div>
     </div>
   );
 }
