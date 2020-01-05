@@ -41,7 +41,13 @@ export default function Syllabary() {
     <div class="container">
       <div class="row">
         <div class="align-self-center justify-content-center">
-          <h1 className="page-title">Katakana Syllabary</h1>
+          <h1 className="page-title">
+            {!isKatakana && !isHiragana
+              ? "Select syllabary"
+              : isKatakana
+              ? "Katakana syllabary"
+              : "Hiragana syllabary"}
+          </h1>
           <div>
             <button
               className="icon-button"
