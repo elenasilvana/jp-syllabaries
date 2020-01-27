@@ -2,6 +2,8 @@ import React, { Component, useState, useEffect } from "react";
 import Board from "../board";
 import { initializeDeck } from "../../deck";
 
+import Modal from "../modal/modal.js";
+
 import aHiragana from "../../layouts/ahiragana.svg";
 import aKatakana from "../../layouts/akatakana.svg";
 
@@ -15,6 +17,7 @@ export default function MemoryGame() {
   const [solved, setSolved] = useState([]);
   //disabled the board when a card has been flipped and when are two cards
   const [disabled, setDisabled] = useState(false);
+  const [isShowing, setisShowing] = useState(false);
 
   useEffect(() => {
     resizeBoard();
@@ -30,6 +33,13 @@ export default function MemoryGame() {
 
     return () => window.removeEventListener("resize", resizeListener);
   });
+
+  useEffect(() => {
+    if (cards.length > 1 && cards.length === solved.length) {
+      setisShowing(true);
+      console.log("is showing", isShowing);
+    }
+  }, [cards, solved]);
 
   const handleClick = id => {
     setDisabled(true);
@@ -78,9 +88,22 @@ export default function MemoryGame() {
     );
   };
 
+  const openModalHandler = () => {
+    setisShowing(true);
+  };
+
+  const closeModalHandler = () => {
+    setisShowing(false);
+  };
+
+  //console.log("cards", cards);
+  //console.log("solved", solved);
+  console.log("is showing", isShowing);
+
   return (
     <div>
       <div>
+        <div></div>
         <h1>
           {!isHiragana && !isKatakana
             ? "Select syllabary"
@@ -113,11 +136,19 @@ export default function MemoryGame() {
           </button>
         </div>
       </div>
-      <div className={!isHiragana && !isKatakana ? "hide" : ""}>
+      <div
+        className={!isHiragana && !isKatakana ? "hide" : ""}
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
         <h3 style={{ paddingTop: "60px" }}>
           do you remember where the pair card is?
         </h3>
-
+        <Modal
+          show={isShowing}
+          close={closeModalHandler}
+          header={"Congratulations!!!"}
+          children={"You win!! Would you like to play again?"}
+        />
         <Board
           dimension={dimension}
           cards={cards}
