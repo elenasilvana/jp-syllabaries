@@ -2,29 +2,25 @@ import React from "react";
 
 import "./modal.css";
 
-const modal = props => {
+const modal = ({ handleClose, show, children, modalTitle }) => {
+  const showHideModal = show ? "display-modal" : "hide";
+
   return (
-    <div
-      className={`${props.show ? "" : "hide"} modal-wrapper`}
-      style={{
-        transform: props.show ? "translateY(0vh)" : "translateY(-100vh)",
-        opacity: props.show ? "1" : "0"
-      }}
-    >
-      <div className="modal-header">
-        <h3>{props.header}</h3>
-        <span className="close-modal-btn" onClick={props.close}>
-          x
-        </span>
-      </div>
-      <div className="modal-body">
-        <span>{props.children}</span>
-      </div>
-      <div className="modal-footer">
-        <button className="btn-cancel" onClick={props.close}>
-          close
-        </button>
-        <button className="btn-continue">Play again</button>
+    <div className={showHideModal}>
+      <div className="modal-main">
+        <section className="modal-header">
+          <span class="close">&times;</span>
+        </section>
+        <section className="modal-body">
+          <h3>{modalTitle}</h3>
+          <span>{children}</span>
+        </section>
+        <section className="modal-footer">
+          <button className="btn-continue">New Game</button>
+          <button className="btn-close" onClick={handleClose}>
+            Close
+          </button>
+        </section>
       </div>
     </div>
   );

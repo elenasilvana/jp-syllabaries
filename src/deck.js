@@ -25,7 +25,7 @@ export function getSyllabaryDeck() {
   return syllabaryCards;
 }
 
-const CARDS_NUMBER = 16;
+const CARDS_NUMBER = 4;
 export function initializeDeck() {
   //función para generar baraja aleatoria a partir del silabario
   const syllabary = Syllabary();

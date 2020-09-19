@@ -92,7 +92,7 @@ export default function MemoryGame() {
     setisShowing(true);
   };
 
-  const closeModalHandler = () => {
+  const handleClose = () => {
     setisShowing(false);
   };
 
@@ -144,10 +144,10 @@ export default function MemoryGame() {
           do you remember where the pair card is?
         </h3>
         <Modal
+          modalTitle={"Congratulations!!"}
           show={isShowing}
-          close={closeModalHandler}
-          header={"Congratulations!!!"}
-          children={"You win!! Would you like to play again?"}
+          handleClose={handleClose}
+          children={"Game completed, would you like to play again?"}
         />
         <Board
           dimension={dimension}
