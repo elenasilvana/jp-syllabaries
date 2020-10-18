@@ -1,9 +1,9 @@
 import { SYLLABARYCHAR } from "./utils/syllabariesCharacters";
 import Syllabary from "./utils/syllabary";
 
-function shuffle(array) {
-  const _array = array.slice(0);
-  for (let i = 0; i < array.length - 1; i++) {
+function shuffle(cards: any[]) {
+  const _array = cards.slice(0);
+  for (let i = 0; i < cards.length - 1; i++) {
     let randomIndex = Math.floor(Math.random() * (i + 1));
     let temp = _array[i];
     _array[i] = _array[randomIndex];
@@ -15,10 +15,10 @@ function shuffle(array) {
 export function getSyllabaryDeck() {
   let id = 0;
   const SyllabariesChar = [...SYLLABARYCHAR];
-  const syllabaryCards = SyllabariesChar.reduce((acc, type) => {
+  const syllabaryCards = SyllabariesChar.reduce((acc: any[], type) => {
     acc.push({
       id: id++,
-      type
+      type,
     });
     return acc;
   }, []);
@@ -37,7 +37,7 @@ export function initializeDeck() {
     const index = Math.floor(Math.random() * syllabary.length);
     let card = {
       id: id++,
-      type: syllabary.splice(index, 1)[0]
+      type: syllabary.splice(index, 1)[0],
     };
     cards.push(card);
 

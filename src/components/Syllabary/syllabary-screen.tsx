@@ -1,18 +1,20 @@
-import React, { useState, useEffect } from "react";
+export {};
+
+/*import React, { useState, useEffect } from "react";
 import SyllabaryBoard from "../syllabaryboard";
 import aKatakana from "../../layouts/akatakana.svg";
 import aHiragana from "../../layouts/ahiragana.svg";
-import "./styles.css";
+import "./syllabary.styles.scss";
 
 import * as Deck from "../../deck";
 
-export default function Syllabary() {
+export const Syllabary = () => {
   const [cards, setCards] = useState([]);
   const [flipped, setFlipped] = useState([]);
   const [isHiragana, setisHiragana] = useState(false);
   const [isKatakana, setisKatakana] = useState(false);
 
-  const handleClick = id => {
+  const handleClick = (id: string) => {
     if (flipped.length === 0) {
       setFlipped([id]);
     }
@@ -29,7 +31,7 @@ export default function Syllabary() {
     setFlipped([]);
   };
 
-  const sameCardClicked = id => flipped.includes(id);
+  const sameCardClicked = (id: string) => flipped.includes(id);
 
   useEffect(() => {
     setCards(Deck.getSyllabaryDeck());
@@ -38,9 +40,9 @@ export default function Syllabary() {
   console.log("hiragana ", isHiragana, " katakana ", isKatakana);
 
   return (
-    <div class="container">
-      <div class="row">
-        <div class="align-self-center justify-content-center">
+    <div className="container">
+      <div className="row">
+        <div className="align-self-center justify-content-center">
           <h1 className="page-title">
             {!isKatakana && !isHiragana
               ? "Select syllabary"
@@ -58,7 +60,7 @@ export default function Syllabary() {
                 }
               }}
             >
-              <img src={aKatakana} style={{ width: "70px" }} />
+              <img src={aKatakana} style={{ width: "70px" }} alt={} />
             </button>
             <button
               className="icon-button"
@@ -69,7 +71,7 @@ export default function Syllabary() {
                 }
               }}
             >
-              <img src={aHiragana} style={{ width: "70px" }} />
+              <img src={aHiragana} style={{ width: "70px" }} alt={} />
             </button>
           </div>
           <div className={isHiragana || isKatakana ? "" : "hide"}>
@@ -85,4 +87,5 @@ export default function Syllabary() {
       </div>
     </div>
   );
-}
+};
+*/
