@@ -6,15 +6,11 @@ import "./syllabary-board.styles.scss";
 
 interface BoardProps {
   cards: any[];
-  flipped: any[];
   isHiragana: boolean;
-  //handleClick: () => void;
 }
 
 export const SyllabaryBoard: React.FunctionComponent<BoardProps> = ({
   cards,
-  flipped,
-  //handleClick,
   isHiragana,
 }) => {
   const caseY = ["ya", "yu", "yo"];
@@ -23,8 +19,6 @@ export const SyllabaryBoard: React.FunctionComponent<BoardProps> = ({
 
   const isValidCase = (type: string, referenceTypes: string[]) =>
     referenceTypes.indexOf(type) >= 0;
-
-  //switch()
 
   const isCase = (type: string) => {
     if (isValidCase(type, caseY)) {
@@ -56,7 +50,6 @@ export const SyllabaryBoard: React.FunctionComponent<BoardProps> = ({
         <div
           className={isCase(card.type.toLowerCase())}
           style={{
-            // width: "18%",
             padding: "3px 1px",
             display: "flex",
             alignItems: "center",

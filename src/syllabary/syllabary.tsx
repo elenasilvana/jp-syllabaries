@@ -1,34 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { SyllabaryBoard } from "../components/syllabaryboard/syllabary-board";
-import "./syllabary.styles.scss";
-
 import * as Deck from "../deck";
-import { Card } from "../components/card/card";
+
+import "./syllabary.styles.scss";
 
 export const Syllabary = () => {
   const [cards, setCards] = useState([]);
-  const [flipped, setFlipped] = useState<string[]>([]);
   const [isHiragana, setisHiragana] = useState(false);
   const [isKatakana, setisKatakana] = useState(false);
-
-  const handleClick = (id: string) => {
-    if (flipped.length === 0) {
-      setFlipped([id]);
-    }
-    if (sameCardClicked(id)) {
-      return setFlipped([]);
-    }
-    if (flipped.length === 1) {
-      resetCard();
-      setFlipped([id]);
-    }
-  };
-
-  const resetCard = () => {
-    setFlipped([]);
-  };
-
-  const sameCardClicked = (id: string) => flipped.includes(id);
 
   useEffect(() => {
     //@ts-ignore
@@ -80,13 +59,7 @@ export const Syllabary = () => {
             }}
             className={isHiragana || isKatakana ? "" : "hide"}
           >
-            <SyllabaryBoard
-              isHiragana={isHiragana}
-              //isKatakana={isKatakana}
-              cards={cards}
-              flipped={flipped}
-              //handleClick={handleClick}
-            />
+            <SyllabaryBoard isHiragana={isHiragana} cards={cards} />
           </div>
         </div>
       </div>
