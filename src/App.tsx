@@ -5,14 +5,18 @@ import { Syllabary } from "./syllabary/syllabary";
 import { Play } from "./play/play";
 import { About } from "./about/about";
 
+import { TopNavMenu } from "./components/menu/topNavMenu";
+
 function App() {
   return (
     <Fragment>
       <Router>
-        <Route path="/" exact component={Home} />
-        <Route path="/syllabary" component={Syllabary} />
-        <Route path="/play" component={Play} />
-        <Route path="/about" component={About} />
+        <TopNavMenu>
+          <Route path="/" exact component={Home} />
+          <Route path="/syllabary" component={Syllabary} />
+          <Route path="/play" component={Play} />
+          <Route path="/about" component={About} />
+        </TopNavMenu>
       </Router>
     </Fragment>
   );
