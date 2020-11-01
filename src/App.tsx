@@ -7,6 +7,8 @@ import { About } from "./about/about";
 
 import { TopNavMenu } from "./components/menu/topNavMenu";
 
+import "./App.styles.scss";
+
 function App() {
   return (
     <Fragment>
