@@ -60,7 +60,7 @@ export const TopNavMenu: React.FunctionComponent<MenuProps> = ({
                 to={menuItem.path}
                 onClick={() => setIsOpenMenu(false)}
               >
-                {menuItem.name}
+                {menuItem.name.toUpperCase()}
               </Link>
             );
           })}

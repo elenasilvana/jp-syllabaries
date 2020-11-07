@@ -17,8 +17,9 @@
     font-size: 17px;
 
     &:hover {
-      background-color: #ddd;
-      color: black;
+      background-color: #f8f6f6;
+      color: #445d67;
+      border-radius: 25px;
     }
   }
 
@@ -59,4 +60,5 @@
 
 .active-item {
   text-decoration: underline;
+  color: #f39d91;
 }
