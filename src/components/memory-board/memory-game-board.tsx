@@ -1,25 +1,27 @@
 import React from "react";
 
-import MemoryCard from "../memorycard/MemoryCard";
+import { MemoryCard } from "../memorycard/memory-card";
 
 import "./styles.css";
 
 interface BoardProps {
   disabled: boolean;
   dimension: number;
-  cards: [];
-  flipped: [];
-  solved: [];
+  cards: any[];
+  flipped: any[];
+  solved: any[];
   isHiragana: boolean;
-  handleClick: () => void;
+  selectedColor: string;
+  handleClick: (id: any) => void;
 }
 
-export const Board: React.FunctionComponent<BoardProps> = ({
+export const GameBoard: React.FunctionComponent<BoardProps> = ({
   disabled,
   dimension,
   cards,
   flipped,
   solved,
+  selectedColor,
   handleClick,
   isHiragana,
 }) => {
@@ -41,6 +43,7 @@ export const Board: React.FunctionComponent<BoardProps> = ({
           //@ts-ignore
           disabled={disabled || solved.includes(card.id)}
           isHiragana={isHiragana}
+          selectedColor={selectedColor}
         />
       ))}
     </div>

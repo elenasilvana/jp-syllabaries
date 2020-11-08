@@ -20,7 +20,7 @@ export const SyllabaryBoard: React.FunctionComponent<BoardProps> = ({
   const isValidCase = (type: string, referenceTypes: string[]) =>
     referenceTypes.indexOf(type) >= 0;
 
-  const isCase = (type: string) => {
+  const getCase = (type: string) => {
     if (isValidCase(type, caseY)) {
       return "w-30";
     }
@@ -48,7 +48,7 @@ export const SyllabaryBoard: React.FunctionComponent<BoardProps> = ({
     >
       {cards.map((card: any) => (
         <div
-          className={isCase(card.type.toLowerCase())}
+          className={getCase(card.type.toLowerCase())}
           style={{
             padding: "3px 1px",
             display: "flex",

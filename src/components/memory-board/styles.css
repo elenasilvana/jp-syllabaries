@@ -4,9 +4,8 @@ body {
 
 .board {
   margin: 0px;
-  padding: 0px;
+  padding: 5%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 10%;
 }

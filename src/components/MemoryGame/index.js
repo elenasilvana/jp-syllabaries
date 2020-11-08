@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
-import Board from "../board";
+import Board from "../memory-board/memory-game-board";
 import { initializeDeck } from "../../deck";
 
 import aHiragana from "../../layouts/ahiragana.svg";
@@ -31,7 +31,7 @@ export default function MemoryGame() {
     return () => window.removeEventListener("resize", resizeListener);
   });
 
-  const handleClick = id => {
+  const handleClick = (id) => {
     setDisabled(true);
     if (flipped.length === 0) {
       setFlipped([id]);
@@ -49,7 +49,7 @@ export default function MemoryGame() {
   };
 
   const preloadImages = () => {
-    cards.map(card => {
+    cards.map((card) => {
       const src = `${process.env.PUBLIC_URL}/img/katakana/${card.type}.png`;
       console.log(src);
       new Image().src = src;
@@ -61,11 +61,11 @@ export default function MemoryGame() {
     setDisabled(false);
   };
 
-  const sameCardClicked = id => flipped.includes(id);
+  const sameCardClicked = (id) => flipped.includes(id);
 
-  const isMatch = id => {
-    const clickedCard = cards.find(card => card.id === id);
-    const flippedCard = cards.find(card => flipped[0] === card.id);
+  const isMatch = (id) => {
+    const clickedCard = cards.find((card) => card.id === id);
+    const flippedCard = cards.find((card) => flipped[0] === card.id);
     return flippedCard.type === clickedCard.type;
   };
 
