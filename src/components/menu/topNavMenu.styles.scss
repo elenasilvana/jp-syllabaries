@@ -1,7 +1,10 @@
+@import "../../palette.scss";
+
 .topnav-menu {
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
+  padding: 3% 5%;
 
   &-icon {
     display: none;
@@ -10,15 +13,16 @@
   &-item {
     float: left;
     display: block;
-    color: #455e67;
+    color: #{$palette-blue};
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-weight: bold;
 
     &:hover {
       background-color: #f8f6f6;
-      color: #445d67;
+      color: #{$palette-blue};
       border-radius: 25px;
     }
   }
@@ -60,5 +64,5 @@
 
 .active-item {
   text-decoration: underline;
-  color: #f39d91;
+  color: #{$palette-pink};
 }
