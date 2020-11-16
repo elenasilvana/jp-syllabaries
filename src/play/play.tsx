@@ -1,4 +1,5 @@
 import React from "react";
+import { ColorSelector } from "../components/color-selector/color-selector";
 import { GameBoard } from "../components/memory-board/memory-game-board";
 import { initializeDeck } from "../deck";
 
@@ -113,19 +114,21 @@ export const Play = () => {
 
   return (
     <div className="play__container">
-      <div>
-        <h1>
+      <div className="play-title">
+        <span className="play-display-instruction">
           {!isHiragana && !isKatakana
-            ? "Select syllabary"
+            ? "Select syllabary type to start playing"
             : isHiragana
             ? "Playing with Hiragana"
             : "Playing with Katakana"}
-        </h1>
+        </span>
         <div className="play-selection-controls">
           <div>
             <div>
               <button
-                className="icon-button"
+                className={`syllabary-btn-hiragana${
+                  isHiragana ? "-active" : ""
+                }`}
                 onClick={() => {
                   setisHiragana(true);
                   if (isKatakana) {
@@ -135,31 +138,26 @@ export const Play = () => {
               >
                 Hiragana
               </button>
+              <button
+                className={`syllabary-btn-katakana${
+                  isKatakana ? "-active" : ""
+                }`}
+                onClick={() => {
+                  setisKatakana(true);
+                  if (isHiragana) {
+                    setisHiragana(false);
+                  }
+                }}
+              >
+                Katakana
+              </button>
             </div>
-            <div className="play-selection-palette">
-              {COLORS.map((color: any) => {
-                return (
-                  <div
-                    onClick={() => setSelectedColor(color.code)}
-                    style={{ background: color.code }}
-                    className="play-selection-palette-btn"
-                  ></div>
-                );
-              })}
-            </div>
-          </div>
-          <div>
-            <button
-              className="icon-button"
-              onClick={() => {
-                setisKatakana(true);
-                if (isHiragana) {
-                  setisHiragana(false);
-                }
-              }}
-            >
-              Katakana
-            </button>
+            {(isHiragana || isKatakana) && (
+              <div className="play-selection-color">
+                <ColorSelector colors={COLORS} setSelected={setSelectedColor} />
+                <ColorSelector colors={COLORS} setSelected={setSelectedColor} />
+              </div>
+            )}
           </div>
         </div>
       </div>

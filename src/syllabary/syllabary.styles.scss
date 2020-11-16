@@ -1,25 +1,53 @@
-.page-title {
-  margin-top: 5%;
-}
+@import "../buttons.scss";
+@import "../palette.scss";
+@import "../containers.scss";
 
-.hide {
-  display: none;
-}
+.syllabary {
+  &__board {
+    @extend .align-column;
 
-.row {
-  justify-content: center;
-}
+    &-hide {
+      display: none;
+    }
+  }
 
-.icon-button {
-  background: white;
-  margin: 10px;
-  border-radius: 4px;
-  border: 2px solid #e7e7e7;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
+  &-title {
+    @extend .align-column;
+    width: 100%;
+    height: 40vh;
+  }
 
-.icon-button:hover {
-  background-color: #e7e7e7;
+  &-btn {
+    &-hiragana {
+      @extend .btn;
+      @extend .btn-inactive;
+
+      &-active {
+        @extend .btn;
+        background: #{$palette-pink};
+        border: 1px solid #{$palette-pink};
+      }
+
+      &:hover {
+        background: #{$palette-pink};
+        border: 1px solid #{$palette-pink};
+      }
+    }
+
+    &-katakana {
+      @extend .btn;
+      @extend .btn-inactive;
+
+      &-active {
+        @extend .btn;
+        background: #{$palette-green};
+        border: 1px solid #{$palette-green};
+      }
+
+      &:hover {
+        background: #{$palette-green};
+        border: 1px solid #{$palette-green};
+      }
+    }
+  }
 }

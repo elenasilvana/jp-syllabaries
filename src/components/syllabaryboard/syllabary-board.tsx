@@ -2,7 +2,7 @@ import React from "react";
 
 import { Card } from "../card/card";
 
-import "./syllabary-board.styles.scss";
+import "./syllabary-board.scss";
 
 interface BoardProps {
   cards: any[];
@@ -34,28 +34,13 @@ export const SyllabaryBoard: React.FunctionComponent<BoardProps> = ({
     }
   };
 
-  console.log("CARDS", cards);
   return (
-    <div
-      className="syllabary-board-container"
-      style={{
-        display: "flex",
-        alignItems: "flex-start",
-        flexWrap: "wrap",
-        width: "100%",
-        justifyContent: "center",
-      }}
-    >
+    <div className="syllabary-board-container">
       {cards.map((card: any) => (
         <div
-          className={getCase(card.type.toLowerCase())}
-          style={{
-            padding: "3px 1px",
-            display: "flex",
-            alignItems: "center",
-            alignContent: "center",
-            justifyContent: "center",
-          }}
+          className={`${getCase(
+            card.type.toLowerCase()
+          )} syllabary-card-container`}
         >
           <Card isHiragana={isHiragana} type={card.type} />
         </div>

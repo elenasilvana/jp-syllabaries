@@ -3,13 +3,11 @@ $palette-green: #11584a;
 $palette-pink: #f39d91;
 $palette-yellow: #f8b133;
 $palette-grey: #6a7e85;
+$palette-blue: #455e67;
 
 .screen-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* implementing variable
-  background: #{$palette-green};
-  */
 }

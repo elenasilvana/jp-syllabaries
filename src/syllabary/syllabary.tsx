@@ -17,51 +17,46 @@ export const Syllabary = () => {
   console.log("hiragana ", isHiragana, " katakana ", isKatakana);
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="align-self-center justify-content-center">
-          <h1 className="page-title">
-            {!isKatakana && !isHiragana
-              ? "Select syllabary"
-              : isKatakana
-              ? "Katakana syllabary"
-              : "Hiragana syllabary"}
-          </h1>
-          <div>
-            <button
-              className="icon-button"
-              onClick={() => {
-                setisKatakana(true);
-                if (isHiragana) {
-                  setisHiragana(false);
-                }
-              }}
-            >
-              Katakana
-            </button>
-            <button
-              className="icon-button"
-              onClick={() => {
-                setisHiragana(true);
-                if (isKatakana) {
-                  setisKatakana(false);
-                }
-              }}
-            >
-              Hiragana
-            </button>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
+    <div className="syllabary__container">
+      <div className="syllabary-title">
+        <h1 className="page-title">
+          {!isKatakana && !isHiragana
+            ? "Select syllabary"
+            : isKatakana
+            ? "Katakana syllabary"
+            : "Hiragana syllabary"}
+        </h1>
+        <div>
+          <button
+            className={`syllabary-btn-hiragana${isHiragana ? "-active" : ""}`}
+            onClick={() => {
+              setisHiragana(true);
+              if (isKatakana) {
+                setisKatakana(false);
+              }
             }}
-            className={isHiragana || isKatakana ? "" : "hide"}
           >
-            <SyllabaryBoard isHiragana={isHiragana} cards={cards} />
-          </div>
+            Hiragana
+          </button>
+          <button
+            className={`syllabary-btn-katakana${isKatakana ? "-active" : ""}`}
+            onClick={() => {
+              setisKatakana(true);
+              if (isHiragana) {
+                setisHiragana(false);
+              }
+            }}
+          >
+            Katakana
+          </button>
         </div>
+      </div>
+      <div
+        className={`syllabary__board${
+          !isHiragana && !isKatakana ? "-hide" : ""
+        }`}
+      >
+        <SyllabaryBoard isHiragana={isHiragana} cards={cards} />
       </div>
     </div>
   );
