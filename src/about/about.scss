@@ -1,0 +1,21 @@
+.about {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-description {
+    width: 50%;
+
+    &-container {
+      span {
+        display: block;
+        padding: 10px;
+      }
+    }
+  }
+
+  &-contact {
+    width: 50%;
+  }
+}
