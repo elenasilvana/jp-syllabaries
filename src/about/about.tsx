@@ -1,5 +1,7 @@
 import React from "react";
 
+import { ReactComponent as LinkedinIcon } from "../icons/icon-linkd.svg";
+
 import "./about.scss";
 
 export const About = () => {
@@ -8,10 +10,7 @@ export const About = () => {
       className="about__container"
       //style={{ display: "flex", justifyContent: "space-between" }}
     >
-      <div
-        className="about-description"
-        //style={{ background: "aliceblue", width: "50%" }}
-      >
+      <div className="about-description">
         <div className="about-description-container">
           <h2>Syllabary Project</h2>
 
@@ -26,30 +25,31 @@ export const About = () => {
           <span>
             El 2019 estuvo lleno de cambios, uno de ellos fue que ingresé a un
             bootcamp (Laboratoria). Y con ello empezé a caminar por un rumbo que
-            no había imaginado. El camino de aprender programación e iniciarme
-            en la travesía de aprender javascript. Como algunos ya sabrán, el
-            tiempo en un bootcamp es poco, pero ese tiempo también dió para dar
-            los primeros pasos en React, y un poco de Node también.
+            no había imaginado. El de iniciarme en la travesía de aprender a
+            programar. Como algunos ya sabrán, el tiempo en un bootcamp es poco,
+            pero ese tiempo también dió para dar los primeros pasos en React, y
+            un poco de Node.
           </span>
           <span>
             Creé este proyecto además por las razones ya mencionadas, porque me
-            pareció una muy buena manera de poner en práctica y mejorar mis
-            skills tecnicas. Empecé a desarrollar esta web app hace
-            aproximadamente un año (agosto 2019) utilizando React, react hooks,
-            y propTypes. después de un año decidí hacer un refactor y poner en
-            práctica las cosas que aprendí durante este año. Aun hacen falta
-            algunas iteraciones para poder completar el refactor y las mejoras
-            contempladas.
+            pareció un reto para practicar y mejorar mis skills tecnicas. Empecé
+            a desarrollar esta web app hace aproximadamente un año (agosto 2019)
+            utilizando React, react hooks, y propTypes. después de un año decidí
+            hacer un refactor y poner en práctica las cosas que aprendí durante
+            este año. Aun hacen falta algunas iteraciones para poder completar
+            el refactor y las mejoras contempladas.
           </span>
           <span>Stack</span>
           <span>React, Typescript, Sass</span>
         </div>
       </div>
-      <div
-        className="about-contact"
-        //style={{ background: "grey", width: "50%" }}
-      >
+      <div className="about-contact">
         <h2>Contact</h2>
+        <span className="about-contact-role">Front-End Developer Junior</span>
+        <span>Elena Silvana Casillas</span>
+        <a href={"https://www.linkedin.com/in/elena-silvana-c/"}>
+          <LinkedinIcon className="about-contact-icon" />
+        </a>
       </div>
     </div>
   );

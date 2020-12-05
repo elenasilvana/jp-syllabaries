@@ -20,6 +20,21 @@ const COLORS = [
   },
 ];
 
+const KATAKANA_PALETTE = [
+  {
+    name: "green",
+    code: "#11584a",
+  },
+  {
+    name: "yellow",
+    code: "#f8b133",
+  },
+  {
+    name: "grey",
+    code: "#6a7e85",
+  },
+];
+
 export const Play = () => {
   const [isHiragana, setisHiragana] = React.useState(false);
   const [isKatakana, setisKatakana] = React.useState(false);
@@ -155,13 +170,16 @@ export const Play = () => {
             {(isHiragana || isKatakana) && (
               <div className="play-selection-color">
                 <ColorSelector colors={COLORS} setSelected={setSelectedColor} />
-                <ColorSelector colors={COLORS} setSelected={setSelectedColor} />
+                <ColorSelector
+                  colors={KATAKANA_PALETTE}
+                  setSelected={setSelectedColor}
+                />
               </div>
             )}
           </div>
         </div>
       </div>
-      <div className={!isHiragana && !isKatakana ? "hide" : ""}>
+      <div className={`play-board${!isHiragana && !isKatakana ? "-hide" : ""}`}>
         <h3 style={{ paddingTop: "60px" }}>
           do you remember where the pair card is?
         </h3>

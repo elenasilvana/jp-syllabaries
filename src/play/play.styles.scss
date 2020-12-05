@@ -29,4 +29,10 @@
       justify-content: space-around;
     }
   }
+
+  &-board {
+    &-hide {
+      display: none;
+    }
+  }
 }
