@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/jp-syllabaries/static/css/main.c1df55ba.chunk.css",
-    "main.js": "/jp-syllabaries/static/js/main.25eaa51f.chunk.js",
-    "main.js.map": "/jp-syllabaries/static/js/main.25eaa51f.chunk.js.map",
-    "runtime~main.js": "/jp-syllabaries/static/js/runtime~main.4ea6f67f.js",
-    "runtime~main.js.map": "/jp-syllabaries/static/js/runtime~main.4ea6f67f.js.map",
-    "static/css/2.266e55a5.chunk.css": "/jp-syllabaries/static/css/2.266e55a5.chunk.css",
-    "static/js/2.935ff4df.chunk.js": "/jp-syllabaries/static/js/2.935ff4df.chunk.js",
-    "static/js/2.935ff4df.chunk.js.map": "/jp-syllabaries/static/js/2.935ff4df.chunk.js.map",
+    "main.css": "/jp-syllabaries/static/css/main.b05172fa.chunk.css",
+    "main.js": "/jp-syllabaries/static/js/main.843c40bd.chunk.js",
+    "main.js.map": "/jp-syllabaries/static/js/main.843c40bd.chunk.js.map",
+    "runtime-main.js": "/jp-syllabaries/static/js/runtime-main.ced698b9.js",
+    "runtime-main.js.map": "/jp-syllabaries/static/js/runtime-main.ced698b9.js.map",
+    "static/js/2.a5d46d04.chunk.js": "/jp-syllabaries/static/js/2.a5d46d04.chunk.js",
+    "static/js/2.a5d46d04.chunk.js.map": "/jp-syllabaries/static/js/2.a5d46d04.chunk.js.map",
     "index.html": "/jp-syllabaries/index.html",
-    "precache-manifest.049b2131e8e9a715503311c73d0dc203.js": "/jp-syllabaries/precache-manifest.049b2131e8e9a715503311c73d0dc203.js",
+    "precache-manifest.aa3b476aefdb2a26760ca90143865f0a.js": "/jp-syllabaries/precache-manifest.aa3b476aefdb2a26760ca90143865f0a.js",
     "service-worker.js": "/jp-syllabaries/service-worker.js",
-    "static/css/2.266e55a5.chunk.css.map": "/jp-syllabaries/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.c1df55ba.chunk.css.map": "/jp-syllabaries/static/css/main.c1df55ba.chunk.css.map",
-    "static/media/ahiragana.svg": "/jp-syllabaries/static/media/ahiragana.efd62058.svg",
-    "static/media/akatakana.svg": "/jp-syllabaries/static/media/akatakana.9ca9362e.svg"
-  }
+    "static/css/main.b05172fa.chunk.css.map": "/jp-syllabaries/static/css/main.b05172fa.chunk.css.map",
+    "static/js/2.a5d46d04.chunk.js.LICENSE.txt": "/jp-syllabaries/static/js/2.a5d46d04.chunk.js.LICENSE.txt",
+    "static/media/icon-linkd.d2d0ed9e.svg": "/jp-syllabaries/static/media/icon-linkd.d2d0ed9e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ced698b9.js",
+    "static/js/2.a5d46d04.chunk.js",
+    "static/css/main.b05172fa.chunk.css",
+    "static/js/main.843c40bd.chunk.js"
+  ]
 }
