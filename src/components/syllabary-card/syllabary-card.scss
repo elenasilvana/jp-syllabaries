@@ -1,0 +1,30 @@
+@import "../../palette.scss";
+@import "../../containers.scss";
+
+.syllabary-card {
+  border-radius: 70px;
+  position: relative;
+
+  &-hiragana {
+    background: #{$palette-pink};
+    @extend .syllabary-card;
+  }
+
+  &-katakana {
+    background: #{$palette-green};
+    @extend .syllabary-card;
+  }
+
+  &-content {
+    @extend .center-content;
+    min-height: 182px;
+  }
+
+  &-char {
+    color: white;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    font-weight: bold;
+  }
+}

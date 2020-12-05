@@ -1,0 +1,53 @@
+@import "../buttons.scss";
+@import "../palette.scss";
+@import "../containers.scss";
+
+.syllabary {
+  &__board {
+    @extend .align-column;
+
+    &-hide {
+      display: none;
+    }
+  }
+
+  &-title {
+    @extend .align-column;
+    width: 100%;
+    height: 40vh;
+  }
+
+  &-btn {
+    &-hiragana {
+      @extend .btn;
+      @extend .btn-inactive;
+
+      &-active {
+        @extend .btn;
+        background: #{$palette-pink};
+        border: 1px solid #{$palette-pink};
+      }
+
+      &:hover {
+        background: #{$palette-pink};
+        border: 1px solid #{$palette-pink};
+      }
+    }
+
+    &-katakana {
+      @extend .btn;
+      @extend .btn-inactive;
+
+      &-active {
+        @extend .btn;
+        background: #{$palette-green};
+        border: 1px solid #{$palette-green};
+      }
+
+      &:hover {
+        background: #{$palette-green};
+        border: 1px solid #{$palette-green};
+      }
+    }
+  }
+}

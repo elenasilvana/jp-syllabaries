@@ -1,0 +1,68 @@
+@import "../../palette.scss";
+
+.topnav-menu {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  padding: 3% 5%;
+
+  &-icon {
+    display: none;
+  }
+
+  &-item {
+    float: left;
+    display: block;
+    color: #{$palette-blue};
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #f8f6f6;
+      color: #{$palette-blue};
+      border-radius: 25px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    & {
+      position: relative;
+      display: block;
+    }
+
+    & a.active-item {
+      display: block;
+      background-color: white;
+    }
+
+    &-icon {
+      float: right;
+      display: block;
+      cursor: pointer;
+      color: white;
+
+      &-is-open {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+    &-item {
+      display: none;
+
+      &-is-open {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.active-item {
+  text-decoration: underline;
+  color: #{$palette-pink};
+}

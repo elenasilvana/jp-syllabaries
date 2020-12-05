@@ -1,0 +1,38 @@
+@import "../screen.scss";
+@import "../containers.scss";
+
+.play {
+  &__container {
+    @extend .screen-container;
+  }
+
+  &-title {
+    @extend .align-column;
+    width: 100%;
+    height: 40vh;
+  }
+
+  &-display-instruction {
+    color: #{$palette-blue};
+    border: 1px solid #{$palette-blue};
+    padding: 12px;
+    border-radius: 17px;
+    margin: 3% 0;
+  }
+
+  &-selection {
+    &-controls {
+      @extend .center-content;
+    }
+    &-color {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  &-board {
+    &-hide {
+      display: none;
+    }
+  }
+}

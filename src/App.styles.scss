@@ -1,0 +1,6 @@
+@import "./palette.scss";
+
+body {
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #{$palette-blue};
+}

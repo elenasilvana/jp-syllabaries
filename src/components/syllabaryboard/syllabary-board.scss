@@ -1,0 +1,28 @@
+@import "../../containers.scss";
+
+.syllabary {
+  &-board-container {
+    @extend .center-content;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .w-18 {
+      width: 18%;
+    }
+    .w-30 {
+      width: 30%;
+    }
+    .w-40 {
+      width: 40%;
+    }
+    .w-100 {
+      width: 100%;
+    }
+  }
+
+  &-card-container {
+    @extend .center-content;
+    padding: 3px 2px;
+  }
+}
