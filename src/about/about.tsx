@@ -13,31 +13,36 @@ export const About = () => {
       <div className="about-description">
         <div className="about-description-container">
           <h2>Syllabary Project</h2>
-
           <span>
-            Por qué silabarios? El interés por crear este proyecto surge por una
-            parte para estudiar los syllabarios japoneses, en particular el
-            Katakana (para mi éste ha sido el mas complicado). Pensé que sería
-            útil para quien quisiera adentrarse en este camino de aprendizaje y
-            quisiera poner a prueba sus conocimientos del silabario, o
-            practicar.
+            I'm Elena Casillas, I studied Visual Arts as a career, with a main
+            interest on photography. But I am currently working as Software
+            Developer.
           </span>
           <span>
-            El 2019 estuvo lleno de cambios, uno de ellos fue que ingresé a un
-            bootcamp (Laboratoria). Y con ello empezé a caminar por un rumbo que
-            no había imaginado. El de iniciarme en la travesía de aprender a
-            programar. Como algunos ya sabrán, el tiempo en un bootcamp es poco,
-            pero ese tiempo también dió para dar los primeros pasos en React, y
-            un poco de Node.
+            In 2019 I decided to start a new career path related to Information
+            technologies so I joint a bootcamp called Laboratoria, and started
+            my programmer journey. As some of you may know the time in a
+            bootcamp is short but it was at least enough to provide me with the
+            first steps on React JS and Node.
           </span>
           <span>
-            Creé este proyecto además por las razones ya mencionadas, porque me
-            pareció un reto para practicar y mejorar mis skills tecnicas. Empecé
-            a desarrollar esta web app hace aproximadamente un año (agosto 2019)
-            utilizando React, react hooks, y propTypes. después de un año decidí
-            hacer un refactor y poner en práctica las cosas que aprendí durante
-            este año. Aun hacen falta algunas iteraciones para poder completar
-            el refactor y las mejoras contempladas.
+            <strong>Why is this project about syllabaries?</strong>
+          </span>
+          <span>
+            One of my reasons to create this project was to study and learn
+            Japanese syllabaries, in particular to practice katakana syllabary
+            (that is for me the more complicated). I thought it would also be
+            useful for those who are learning Japanese and who want to test
+            their knowledge or just to practice.
+          </span>
+          <span>
+            I found the creation of this app interesting and challenging and a
+            way to improve my tech skills. The first version of this app was
+            develop in August 2019 using React, hooks and prop types. A year
+            later I came up with some ideas from what I've learned studying and
+            working and decided to do a refactor. I am going to continue working
+            on completing the code changes and the UI changes needed to achieve
+            what I have in mind for a newer version.
           </span>
           <span>Stack</span>
           <span>React, Typescript, Sass</span>
