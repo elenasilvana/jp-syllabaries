@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/jp-syllabaries/static/css/main.b05172fa.chunk.css",
-    "main.js": "/jp-syllabaries/static/js/main.843c40bd.chunk.js",
-    "main.js.map": "/jp-syllabaries/static/js/main.843c40bd.chunk.js.map",
+    "main.js": "/jp-syllabaries/static/js/main.727258bb.chunk.js",
+    "main.js.map": "/jp-syllabaries/static/js/main.727258bb.chunk.js.map",
     "runtime-main.js": "/jp-syllabaries/static/js/runtime-main.ced698b9.js",
     "runtime-main.js.map": "/jp-syllabaries/static/js/runtime-main.ced698b9.js.map",
     "static/js/2.a5d46d04.chunk.js": "/jp-syllabaries/static/js/2.a5d46d04.chunk.js",
     "static/js/2.a5d46d04.chunk.js.map": "/jp-syllabaries/static/js/2.a5d46d04.chunk.js.map",
     "index.html": "/jp-syllabaries/index.html",
-    "precache-manifest.aa3b476aefdb2a26760ca90143865f0a.js": "/jp-syllabaries/precache-manifest.aa3b476aefdb2a26760ca90143865f0a.js",
+    "precache-manifest.7f654c39898eb8b015c8958130eff484.js": "/jp-syllabaries/precache-manifest.7f654c39898eb8b015c8958130eff484.js",
     "service-worker.js": "/jp-syllabaries/service-worker.js",
     "static/css/main.b05172fa.chunk.css.map": "/jp-syllabaries/static/css/main.b05172fa.chunk.css.map",
     "static/js/2.a5d46d04.chunk.js.LICENSE.txt": "/jp-syllabaries/static/js/2.a5d46d04.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.ced698b9.js",
     "static/js/2.a5d46d04.chunk.js",
     "static/css/main.b05172fa.chunk.css",
-    "static/js/main.843c40bd.chunk.js"
+    "static/js/main.727258bb.chunk.js"
   ]
 }
