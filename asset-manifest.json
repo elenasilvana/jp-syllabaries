@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/jp-syllabaries/static/css/main.b05172fa.chunk.css",
-    "main.js": "/jp-syllabaries/static/js/main.727258bb.chunk.js",
-    "main.js.map": "/jp-syllabaries/static/js/main.727258bb.chunk.js.map",
+    "main.css": "/jp-syllabaries/static/css/main.2df8599e.chunk.css",
+    "main.js": "/jp-syllabaries/static/js/main.ac6ca1d8.chunk.js",
+    "main.js.map": "/jp-syllabaries/static/js/main.ac6ca1d8.chunk.js.map",
     "runtime-main.js": "/jp-syllabaries/static/js/runtime-main.ced698b9.js",
     "runtime-main.js.map": "/jp-syllabaries/static/js/runtime-main.ced698b9.js.map",
     "static/js/2.a5d46d04.chunk.js": "/jp-syllabaries/static/js/2.a5d46d04.chunk.js",
     "static/js/2.a5d46d04.chunk.js.map": "/jp-syllabaries/static/js/2.a5d46d04.chunk.js.map",
     "index.html": "/jp-syllabaries/index.html",
-    "precache-manifest.7f654c39898eb8b015c8958130eff484.js": "/jp-syllabaries/precache-manifest.7f654c39898eb8b015c8958130eff484.js",
+    "precache-manifest.61246561473c31ee2a3fb67693e68d3d.js": "/jp-syllabaries/precache-manifest.61246561473c31ee2a3fb67693e68d3d.js",
     "service-worker.js": "/jp-syllabaries/service-worker.js",
-    "static/css/main.b05172fa.chunk.css.map": "/jp-syllabaries/static/css/main.b05172fa.chunk.css.map",
+    "static/css/main.2df8599e.chunk.css.map": "/jp-syllabaries/static/css/main.2df8599e.chunk.css.map",
     "static/js/2.a5d46d04.chunk.js.LICENSE.txt": "/jp-syllabaries/static/js/2.a5d46d04.chunk.js.LICENSE.txt",
     "static/media/icon-linkd.d2d0ed9e.svg": "/jp-syllabaries/static/media/icon-linkd.d2d0ed9e.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.ced698b9.js",
     "static/js/2.a5d46d04.chunk.js",
-    "static/css/main.b05172fa.chunk.css",
-    "static/js/main.727258bb.chunk.js"
+    "static/css/main.2df8599e.chunk.css",
+    "static/js/main.ac6ca1d8.chunk.js"
   ]
 }
