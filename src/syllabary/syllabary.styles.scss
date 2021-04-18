@@ -2,6 +2,13 @@
 @import "../palette.scss";
 @import "../containers.scss";
 
+.page-title {
+  color: #{$palette-blue};
+  padding: 12px;
+  border-radius: 17px;
+  margin: 3% 0;
+}
+
 .syllabary {
   &__board {
     @extend .align-column;
