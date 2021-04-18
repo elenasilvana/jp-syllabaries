@@ -14,8 +14,6 @@ export const Syllabary = () => {
     setCards(Deck.getSyllabaryDeck());
   }, []);
 
-  console.log("hiragana ", isHiragana, " katakana ", isKatakana);
-
   return (
     <div className="syllabary__container">
       <div className="syllabary-title">

@@ -90,7 +90,6 @@ export const Play = () => {
     cards.map((card) => {
       //@ts-ignore
       const src = `${process.env.PUBLIC_URL}/img/katakana/${card.type}.png`;
-      console.log(src);
       new Image().src = src;
     });
   };
