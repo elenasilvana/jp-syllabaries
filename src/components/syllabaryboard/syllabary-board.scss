@@ -26,3 +26,21 @@
     padding: 3px 2px;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .syllabary-board-container {
+    display: block;
+
+    .w-18 {
+      width: unset;
+    }
+
+    .w-30 {
+      width: unset;
+    }
+
+    .w-40 {
+      width: unset;
+    }
+  }
+}
