@@ -14,18 +14,16 @@ export const Syllabary = () => {
     setCards(Deck.getSyllabaryDeck());
   }, []);
 
-  console.log("hiragana ", isHiragana, " katakana ", isKatakana);
-
   return (
     <div className="syllabary__container">
       <div className="syllabary-title">
-        <h1 className="page-title">
+        <span className="page-title">
           {!isKatakana && !isHiragana
             ? "Select syllabary"
             : isKatakana
             ? "Katakana syllabary"
             : "Hiragana syllabary"}
-        </h1>
+        </span>
         <div>
           <button
             className={`syllabary-btn-hiragana${isHiragana ? "-active" : ""}`}
